@@ -39,6 +39,7 @@
             this.btnEmptyPot = new System.Windows.Forms.Button();
             this.btnBet = new System.Windows.Forms.Button();
             this.numBet = new System.Windows.Forms.NumericUpDown();
+            this.btnEliminate = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numBet)).BeginInit();
             this.SuspendLayout();
@@ -50,7 +51,7 @@
             this.settingsToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(414, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(397, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -72,7 +73,7 @@
             this.listbPlayers.FormattingEnabled = true;
             this.listbPlayers.Location = new System.Drawing.Point(69, 27);
             this.listbPlayers.Name = "listbPlayers";
-            this.listbPlayers.Size = new System.Drawing.Size(84, 212);
+            this.listbPlayers.Size = new System.Drawing.Size(84, 121);
             this.listbPlayers.TabIndex = 1;
             this.listbPlayers.SelectedValueChanged += new System.EventHandler(this.listbPlayers_SelectedValueChanged);
             // 
@@ -80,7 +81,7 @@
             // 
             this.btnUpdate.Location = new System.Drawing.Point(12, 27);
             this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(51, 212);
+            this.btnUpdate.Size = new System.Drawing.Size(51, 121);
             this.btnUpdate.TabIndex = 7;
             this.btnUpdate.Text = "Update";
             this.btnUpdate.UseVisualStyleBackColor = true;
@@ -100,7 +101,7 @@
             // 
             this.lblMoney.AutoSize = true;
             this.lblMoney.Font = new System.Drawing.Font("Microsoft YaHei UI", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMoney.Location = new System.Drawing.Point(296, 54);
+            this.lblMoney.Location = new System.Drawing.Point(266, 54);
             this.lblMoney.Name = "lblMoney";
             this.lblMoney.Size = new System.Drawing.Size(52, 19);
             this.lblMoney.TabIndex = 9;
@@ -118,7 +119,7 @@
             // 
             // btnEmptyPot
             // 
-            this.btnEmptyPot.Location = new System.Drawing.Point(314, 28);
+            this.btnEmptyPot.Location = new System.Drawing.Point(295, 27);
             this.btnEmptyPot.Name = "btnEmptyPot";
             this.btnEmptyPot.Size = new System.Drawing.Size(88, 25);
             this.btnEmptyPot.TabIndex = 11;
@@ -129,7 +130,7 @@
             // btnBet
             // 
             this.btnBet.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBet.Location = new System.Drawing.Point(314, 114);
+            this.btnBet.Location = new System.Drawing.Point(295, 113);
             this.btnBet.Name = "btnBet";
             this.btnBet.Size = new System.Drawing.Size(64, 23);
             this.btnBet.TabIndex = 12;
@@ -144,7 +145,7 @@
             0,
             0,
             0});
-            this.numBet.Location = new System.Drawing.Point(314, 88);
+            this.numBet.Location = new System.Drawing.Point(295, 87);
             this.numBet.Maximum = new decimal(new int[] {
             10000,
             0,
@@ -154,11 +155,22 @@
             this.numBet.Size = new System.Drawing.Size(64, 20);
             this.numBet.TabIndex = 13;
             // 
+            // btnEliminate
+            // 
+            this.btnEliminate.Location = new System.Drawing.Point(164, 125);
+            this.btnEliminate.Name = "btnEliminate";
+            this.btnEliminate.Size = new System.Drawing.Size(75, 23);
+            this.btnEliminate.TabIndex = 14;
+            this.btnEliminate.Text = "Eliminate";
+            this.btnEliminate.UseVisualStyleBackColor = true;
+            this.btnEliminate.Click += new System.EventHandler(this.btnEliminate_Click);
+            // 
             // FrmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(414, 246);
+            this.ClientSize = new System.Drawing.Size(397, 162);
+            this.Controls.Add(this.btnEliminate);
             this.Controls.Add(this.numBet);
             this.Controls.Add(this.btnBet);
             this.Controls.Add(this.btnEmptyPot);
@@ -187,12 +199,13 @@
         private System.Windows.Forms.ToolStripMenuItem settingsToolStripMenuItem;
         private System.Windows.Forms.ListBox listbPlayers;
         private System.Windows.Forms.Button btnUpdate;
-        private System.Windows.Forms.Label lblName;
-        private System.Windows.Forms.Label lblMoney;
-        private System.Windows.Forms.Label lblPot;
         private System.Windows.Forms.Button btnEmptyPot;
         private System.Windows.Forms.Button btnBet;
         private System.Windows.Forms.NumericUpDown numBet;
+        public System.Windows.Forms.Label lblName;
+        public System.Windows.Forms.Label lblMoney;
+        public System.Windows.Forms.Label lblPot;
+        private System.Windows.Forms.Button btnEliminate;
     }
 }
 

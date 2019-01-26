@@ -31,7 +31,6 @@ namespace Simulated_Money_App
             }
 
             FrmMain.pot.sendMoney(selectedPlayer);
-
             this.Close();
         }
 

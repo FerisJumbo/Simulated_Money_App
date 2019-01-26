@@ -20,11 +20,6 @@ namespace Simulated_Money_App
         public FrmMain() { InitializeComponent(); }
         private void Form1_Load(object sender, EventArgs e) { }
 
-        private void btnExecute_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void newPlayerToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Form newplayer = new NewPlayerfrm();
@@ -34,6 +29,8 @@ namespace Simulated_Money_App
         private void btnUpdate_Click(object sender, EventArgs e)
         {
             UpdatelistboxPlayers();
+
+            lblPot.Text = "Pot: $" + pot.getMoney();
         }
 
         private void UpdatelistboxPlayers()
@@ -66,6 +63,10 @@ namespace Simulated_Money_App
         {
             SendingMoney sendM = new SendingMoney();
             sendM.Show();
+            lblName.Text = selectedPlayer.getName();
+            lblMoney.Text = "$" + selectedPlayer.getMoney().ToString();
+
+            lblPot.Text = "Pot: $" + pot.getMoney();
         }
 
         private void btnBet_Click(object sender, EventArgs e)
@@ -73,6 +74,21 @@ namespace Simulated_Money_App
             int value = Convert.ToInt32(numBet.Value);
             selectedPlayer.subMoney(value);
             pot.addMoney(value);
+            lblName.Text = selectedPlayer.getName();
+            lblMoney.Text = "$" + selectedPlayer.getMoney().ToString();
+
+            lblPot.Text = "Pot: $" + pot.getMoney();
+        }
+
+        private void btnEliminate_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show("Are you sure you want to Delete\n" + selectedPlayer.getName(),
+                "Delete a Player", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
+            if (result == DialogResult.Yes)
+            {
+                players.Remove(selectedPlayer);
+            }
+            else { }
         }
     }
 }
