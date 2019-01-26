@@ -6,21 +6,22 @@ using System.Threading.Tasks;
 
 namespace Simulated_Money_App
 {
-    public class Player
+    public class Pot
     {
-        private String Name;
         private int Money;
 
-        public Player(String name, int money)
+        public Pot()
         {
-            this.Name = name;
-            this.Money = money;
+            this.Money = 0;
         }
 
+        public void sendMoney(Player p)
+        {
+            p.addMoney(this.Money);
+            this.Money = 0;
+        }
         public void addMoney(int v) { this.Money = this.Money + v; }
-        public void subMoney(int v) { this.Money = this.Money - v; }
 
-        public String getName() { return this.Name; }
         public int getMoney() { return this.Money; }
     }
 }

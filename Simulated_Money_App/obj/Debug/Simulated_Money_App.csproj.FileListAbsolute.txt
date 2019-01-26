@@ -9,3 +9,4 @@ C:\Users\Cole Gartner\source\repos\Simulated_Money_App\Simulated_Money_App\obj\D
 C:\Users\Cole Gartner\source\repos\Simulated_Money_App\Simulated_Money_App\obj\Debug\Simulated_Money_App.csproj.CoreCompileInputs.cache
 C:\Users\Cole Gartner\source\repos\Simulated_Money_App\Simulated_Money_App\obj\Debug\Simulated_Money_App.exe
 C:\Users\Cole Gartner\source\repos\Simulated_Money_App\Simulated_Money_App\obj\Debug\Simulated_Money_App.pdb
+C:\Users\Cole Gartner\source\repos\Simulated_Money_App\Simulated_Money_App\obj\Debug\Simulated_Money_App.SendingMoney.resources

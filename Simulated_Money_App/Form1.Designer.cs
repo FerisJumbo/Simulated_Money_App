@@ -33,7 +33,14 @@
             this.settingsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.listbPlayers = new System.Windows.Forms.ListBox();
             this.btnUpdate = new System.Windows.Forms.Button();
+            this.lblName = new System.Windows.Forms.Label();
+            this.lblMoney = new System.Windows.Forms.Label();
+            this.lblPot = new System.Windows.Forms.Label();
+            this.btnEmptyPot = new System.Windows.Forms.Button();
+            this.btnBet = new System.Windows.Forms.Button();
+            this.numBet = new System.Windows.Forms.NumericUpDown();
             this.menuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numBet)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -43,7 +50,7 @@
             this.settingsToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(205, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(414, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -65,8 +72,9 @@
             this.listbPlayers.FormattingEnabled = true;
             this.listbPlayers.Location = new System.Drawing.Point(69, 27);
             this.listbPlayers.Name = "listbPlayers";
-            this.listbPlayers.Size = new System.Drawing.Size(117, 212);
+            this.listbPlayers.Size = new System.Drawing.Size(84, 212);
             this.listbPlayers.TabIndex = 1;
+            this.listbPlayers.SelectedValueChanged += new System.EventHandler(this.listbPlayers_SelectedValueChanged);
             // 
             // btnUpdate
             // 
@@ -78,11 +86,85 @@
             this.btnUpdate.UseVisualStyleBackColor = true;
             this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
+            // lblName
+            // 
+            this.lblName.AutoSize = true;
+            this.lblName.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblName.Location = new System.Drawing.Point(159, 52);
+            this.lblName.Name = "lblName";
+            this.lblName.Size = new System.Drawing.Size(58, 22);
+            this.lblName.TabIndex = 8;
+            this.lblName.Text = "Name";
+            // 
+            // lblMoney
+            // 
+            this.lblMoney.AutoSize = true;
+            this.lblMoney.Font = new System.Drawing.Font("Microsoft YaHei UI", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMoney.Location = new System.Drawing.Point(296, 54);
+            this.lblMoney.Name = "lblMoney";
+            this.lblMoney.Size = new System.Drawing.Size(52, 19);
+            this.lblMoney.TabIndex = 9;
+            this.lblMoney.Text = "Money";
+            // 
+            // lblPot
+            // 
+            this.lblPot.AutoSize = true;
+            this.lblPot.Font = new System.Drawing.Font("Microsoft New Tai Lue", 14.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPot.Location = new System.Drawing.Point(159, 27);
+            this.lblPot.Name = "lblPot";
+            this.lblPot.Size = new System.Drawing.Size(69, 25);
+            this.lblPot.TabIndex = 10;
+            this.lblPot.Text = "Pot: $0";
+            // 
+            // btnEmptyPot
+            // 
+            this.btnEmptyPot.Location = new System.Drawing.Point(314, 28);
+            this.btnEmptyPot.Name = "btnEmptyPot";
+            this.btnEmptyPot.Size = new System.Drawing.Size(88, 25);
+            this.btnEmptyPot.TabIndex = 11;
+            this.btnEmptyPot.Text = "Empty Pot To...";
+            this.btnEmptyPot.UseVisualStyleBackColor = true;
+            this.btnEmptyPot.Click += new System.EventHandler(this.btnEmptyPot_Click);
+            // 
+            // btnBet
+            // 
+            this.btnBet.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBet.Location = new System.Drawing.Point(314, 114);
+            this.btnBet.Name = "btnBet";
+            this.btnBet.Size = new System.Drawing.Size(64, 23);
+            this.btnBet.TabIndex = 12;
+            this.btnBet.Text = "Bet";
+            this.btnBet.UseVisualStyleBackColor = true;
+            this.btnBet.Click += new System.EventHandler(this.btnBet_Click);
+            // 
+            // numBet
+            // 
+            this.numBet.Increment = new decimal(new int[] {
+            50,
+            0,
+            0,
+            0});
+            this.numBet.Location = new System.Drawing.Point(314, 88);
+            this.numBet.Maximum = new decimal(new int[] {
+            10000,
+            0,
+            0,
+            0});
+            this.numBet.Name = "numBet";
+            this.numBet.Size = new System.Drawing.Size(64, 20);
+            this.numBet.TabIndex = 13;
+            // 
             // FrmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(205, 246);
+            this.ClientSize = new System.Drawing.Size(414, 246);
+            this.Controls.Add(this.numBet);
+            this.Controls.Add(this.btnBet);
+            this.Controls.Add(this.btnEmptyPot);
+            this.Controls.Add(this.lblPot);
+            this.Controls.Add(this.lblMoney);
+            this.Controls.Add(this.lblName);
             this.Controls.Add(this.btnUpdate);
             this.Controls.Add(this.listbPlayers);
             this.Controls.Add(this.menuStrip1);
@@ -92,6 +174,7 @@
             this.Load += new System.EventHandler(this.Form1_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numBet)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -104,6 +187,12 @@
         private System.Windows.Forms.ToolStripMenuItem settingsToolStripMenuItem;
         private System.Windows.Forms.ListBox listbPlayers;
         private System.Windows.Forms.Button btnUpdate;
+        private System.Windows.Forms.Label lblName;
+        private System.Windows.Forms.Label lblMoney;
+        private System.Windows.Forms.Label lblPot;
+        private System.Windows.Forms.Button btnEmptyPot;
+        private System.Windows.Forms.Button btnBet;
+        private System.Windows.Forms.NumericUpDown numBet;
     }
 }
 
