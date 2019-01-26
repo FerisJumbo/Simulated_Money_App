@@ -1,0 +1,11 @@
+C:\Users\Cole Gartner\source\repos\Simulated_Money_App\Simulated_Money_App\bin\Debug\Simulated_Money_App.exe.config
+C:\Users\Cole Gartner\source\repos\Simulated_Money_App\Simulated_Money_App\bin\Debug\Simulated_Money_App.exe
+C:\Users\Cole Gartner\source\repos\Simulated_Money_App\Simulated_Money_App\bin\Debug\Simulated_Money_App.pdb
+C:\Users\Cole Gartner\source\repos\Simulated_Money_App\Simulated_Money_App\obj\Debug\Simulated_Money_App.csprojAssemblyReference.cache
+C:\Users\Cole Gartner\source\repos\Simulated_Money_App\Simulated_Money_App\obj\Debug\Simulated_Money_App.FrmMain.resources
+C:\Users\Cole Gartner\source\repos\Simulated_Money_App\Simulated_Money_App\obj\Debug\Simulated_Money_App.NewPlayerfrm.resources
+C:\Users\Cole Gartner\source\repos\Simulated_Money_App\Simulated_Money_App\obj\Debug\Simulated_Money_App.Properties.Resources.resources
+C:\Users\Cole Gartner\source\repos\Simulated_Money_App\Simulated_Money_App\obj\Debug\Simulated_Money_App.csproj.GenerateResource.cache
+C:\Users\Cole Gartner\source\repos\Simulated_Money_App\Simulated_Money_App\obj\Debug\Simulated_Money_App.csproj.CoreCompileInputs.cache
+C:\Users\Cole Gartner\source\repos\Simulated_Money_App\Simulated_Money_App\obj\Debug\Simulated_Money_App.exe
+C:\Users\Cole Gartner\source\repos\Simulated_Money_App\Simulated_Money_App\obj\Debug\Simulated_Money_App.pdb
